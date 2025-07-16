@@ -28,6 +28,20 @@ java -jar target/emergency-centers-api-1.0.0.jar
 ## Swagger Documentation
 Access [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html) after starting the application.
 
+---
+
+## Required Authentication
+
+To test this API, you must use authentication with the following header:
+
+```
+Authorization: supersecret
+```
+
+Requests without this header will not be authorized.
+
+---
+
 ## Project Structure
 - `controller/` - REST endpoints
 - `service/` - Business logic
