@@ -1,0 +1,44 @@
+package br.com.emergency.dto;
+
+import br.com.emergency.domain.model.ItemNegotiated;
+import java.util.List;
+
+@io.swagger.v3.oas.annotations.media.Schema(
+    example = "{\n" +
+        "  \"negotiationId\": \"abc123\",\n" +
+        "  \"originCenterId\": \"1\",\n" +
+        "  \"destinationCenterId\": \"2\",\n" +
+        "  \"originItems\": [\"WATER\", \"FOOD\"],\n" +
+        "  \"destinationItems\": [\"MEDICAL_KIT\"],\n" +
+        "  \"dateTime\": \"2025-07-15T18:00:00\",\n" +
+        "  \"status\": \"APPROVED\"\n" +
+        "}"
+)
+public class NegotiationResponseDTO {
+    private String negotiationId;
+    private String originCenterId;
+    private String destinationCenterId;
+    private java.time.LocalDateTime dateTime;
+    private java.util.List<br.com.emergency.domain.model.ItemNegotiated> originItems;
+    private java.util.List<br.com.emergency.domain.model.ItemNegotiated> destinationItems;
+    private String status;
+    private String message;
+
+    public String getMessage() { return message; }
+    public void setMessage(String message) { this.message = message; }
+
+    public String getNegotiationId() { return negotiationId; }
+    public void setNegotiationId(String negotiationId) { this.negotiationId = negotiationId; }
+    public String getOriginCenterId() { return originCenterId; }
+    public void setOriginCenterId(String originCenterId) { this.originCenterId = originCenterId; }
+    public String getDestinationCenterId() { return destinationCenterId; }
+    public void setDestinationCenterId(String destinationCenterId) { this.destinationCenterId = destinationCenterId; }
+    public java.time.LocalDateTime getDateTime() { return dateTime; }
+    public void setDateTime(java.time.LocalDateTime dateTime) { this.dateTime = dateTime; }
+    public java.util.List<br.com.emergency.domain.model.ItemNegotiated> getOriginItems() { return originItems; }
+    public void setOriginItems(java.util.List<br.com.emergency.domain.model.ItemNegotiated> originItems) { this.originItems = originItems; }
+    public java.util.List<br.com.emergency.domain.model.ItemNegotiated> getDestinationItems() { return destinationItems; }
+    public void setDestinationItems(java.util.List<br.com.emergency.domain.model.ItemNegotiated> destinationItems) { this.destinationItems = destinationItems; }
+    public String getStatus() { return status; }
+    public void setStatus(String status) { this.status = status; }
+}
